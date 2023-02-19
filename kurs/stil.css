@@ -1,0 +1,26 @@
+ol li a {background:red}
+#p1{background-color: rgb(225, 225, 235) !important;  } /* !important  etiketi css özelliğinin hiçbir şekilde değiştirilememesini sağlar (noktalı virgülün içine */
+/* "*" etiketi tüm elemanları seçer */
+h1{color: rgba(123, 121, 221, 0.6); 
+opacity: 0.4;
+border-left: 5px red solid   ; border-radius: 5px;
+border-right: 12px  blue solid;
+border-top: 12px green dotted;}
+/* 06değeriopacity ile aynı */
+#box-1 {width: 150px;
+    height: 150px;
+ background: red;
+ border-radius: 150px;
+}
+div.box-2{background: red;
+    width: 50%;
+    max-width: 500px;
+    
+}
+div.box-3{background: black;
+    width: 50%;
+    
+} 
+div.box4 {background: yellow;
+max-width: 600px;}
+

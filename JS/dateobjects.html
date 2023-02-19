@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Objects</title>
+</head>
+<body>
+    <script>
+let value;
+
+const now = new Date();
+const date1= new Date("11-21-1993 02:15:54");
+const date2= new Date("November 21 1993");
+const date3= new Date("11/21/1993");
+
+value=date3;
+value=date1.getMonth();
+value=date1.getDay();
+value=date1.getDate();
+value=date1.getMinutes();
+value=date1.getHours();
+value=date1;
+
+date1.setSeconds(14);
+date1.setDate(31);
+date1.setMinutes(56);
+date1.setMonth(0);
+date1.setFullYear(1982);
+date1.setMilliseconds(37);
+
+console.log(value);
+
+    </script>
+    
+</body>
+</html>

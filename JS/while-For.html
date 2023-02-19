@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i=0;
+while(i <= 10){
+    console.log(i);
+    i++; // i+=1 , i=i+1 aynı şeyler
+}
+
+let a=10;
+while(a> 0) {
+    console.log(a);
+    if(a==5){break;}
+    a=a-4;
+}
+
+let e=0;
+
+while(e<10){
+    if (e==3 || e==5){    //3 ve 5 i atladık sonrasında devam ettik
+        e++;
+        continue;
+    }
+    console.log(e);
+    e++;
+}
+
+// DO WHİLE DÖNGÜSÜ DO dan SONRA WHİLE İLE KONTROL EDER
+let q=0; 
+do{
+console.log(q);
+q++;
+}
+while(q<10);
+
+
+const langs=["java","Phyton","Javascript","C++"];
+// let c=0;
+// while(c<4){
+//     console.log(langs[c]);
+//     c++;
+// }
+for(let c=0;c<langs.length;c++){
+console.log(langs[c])    
+}
+langs.forEach(function(langs,c){
+    console.log(langs,c);
+} );
+console.log(langs.length);
+
+const users=[
+    {name:"Baybars", age:1},
+    {name:"Kübra", age:26},
+    {name:"Çağrı", age:29} ];
+    const names=users.map(function(kullanici)
+    {return kullanici.name;})
+    const ages=users.map(function(yas)
+    {return yas.age;}
+    )
+
+
+    console.log(names);
+    console.log(names,ages);
+    console.log(ages);
+
+const sehir={
+    isim:"kayseri",
+    nüfus:1300000
+};
+
+for(let key in sehir){
+     // console.log(key,sehir[key]);
+    console.log(sehir[key]);
+}
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let value;
+
+const numbers= [24,14,63,18,91,1];
+numbers.push(12);
+const langs= ["java","pyhton","c++","css"]
+const a=["pyhton",22,null,undefined];
+
+value=numbers.length;
+value=numbers[numbers.length - 3]
+// index değiştirme
+numbers[2]=3333;
+// value=numbers;
+// index değeri bulma
+value=numbers.indexOf(91);
+
+// numbers.unshift(10000); arreyin başına değer ekleme
+
+// numbers.pop();   ARREYİN SONUNDAKİ DEĞERİ SİLER 
+// numbers.shift(); ARREYİN BAŞINDAKİ DEĞERİ SİLER 
+// numbers.splice(1,2);  BELİRLENEN İNDEKSLERDEN DEĞER SİLME
+// numbers.reverse();  ARREYİ TERSİNE ÇEVİRME
+value=numbers;
+// value=numbers.sort(); İLK RAKAMINA GÖRE KÜÇÜKTEN BÜYÜĞE SIRALAR
+
+// value=numbers.sort(function(x,y){return x-y}); Küçükten büyüğe
+// value=numbers.sort(function(x,y){return y-x}); Büyükten Küçüğe
+
+console.log(value);
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koşullar</title>
+</head>
+<body>
+    <script>
+// ==        ("2"=2)
+// ===          ("2"eşit değildir 2 )
+// < 
+// >
+// != eşit değildir 
+// !==
+// <= küçükeşittir
+// >= büyükeşittir 
+
+
+
+console.log(2==2);
+console.log("java" == "js");
+console.log(2==="2");
+console.log(2=="2");
+console.log(2==3);
+
+//Not operatörü yani cevabı tersine çevirir
+console.log(!(2==3))
+
+//And Operatörü bütün değerler doğruysa true yanlışsa false cevabı verir
+console.log((2=="2") && ("Baybars"=="Baybars") && ("bozkurt"!="bozkurT"))
+
+// Or Operatörü verilerden biri bile doğruysa True
+
+console.log(("Ahmet"=="ahmet") || ("12"==12));
+
+const error=false;
+if(error==true){
+    console.log("Hata Oluştu");
+}
+//if bloğu uyumlu olup hata oluşmazsa else bloğu devreye girer
+else{
+ console.log("Hata Oluşmadı");
+}
+
+const user="cb";
+if(user=="cb1"){
+    console.log("Kullanıcı Bulundu");
+}
+else{console.log("Kullanıcı Bulunamadı..."); }
+
+const process="3";
+if (process==="11") {
+    console.log("İşlem 11");
+}
+else if(process==="3"){
+    console.log("işlem3");
+}
+else if(process==="4"){
+    console.log("işlem4");
+}
+else { console.log("Geçersiz İşlem!!");}
+
+// İf Else birlikte yazımı doğruysa soru işareti sonrası yanlışsa iki nokta sonrası devreye girer
+console.log(process==="3" ? "Sayı Eşittir 3" : "Sayı Eşit Değil 3")
+
+
+
+
+    </script>
+    
+</body>
+</html>

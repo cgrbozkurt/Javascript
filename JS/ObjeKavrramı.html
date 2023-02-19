@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+let value;
+const Programmer={
+    name: "Cagri Bozkurt",
+    age:29,
+    email:"cagribozkurt@gmail.com",
+    langs:["pyhton", "java","c+"],
+    address:{
+        city:"Kayseri",
+        street:"sıla sk.",
+    },
+    work:function(){console.log("Programcı asdf asfasdf asfasdfasdfasdf")},
+}
+value=Programmer.address.city;
+Programmer.work();
+
+const programmers=[ {name:"Baybars Enes Bozkurt", age:1,},
+{name:"Cagri Bozkurt", age:29,}];
+
+value=programmers[0].age;
+console.log(value);
+
+
+
+    </script>
+</body>
+</html>

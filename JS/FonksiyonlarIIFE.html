@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function merhaba(){
+            console.log("Merhaba");
+        }
+
+merhaba(); // function call (fonksiyon çağrısı)
+merhaba();
+
+function form(name,age){
+    if(typeof name==="undefined") name="bilinmiyor";
+    if(typeof age==="undefined")  age="bilinmiyor";
+    console.log(`isim:${name} yaş:${age}`);
+} 
+form("çağrı",29); 
+form();
+form("Baybars");
+
+function square(x){
+    console.log(x*x);
+    return x*x;
+}
+square(7 ); 
+
+function cube(x)
+{console.log(x*x*x);
+    return x*x*x;
+}
+cube(4);
+
+let a=square(3);
+a=cube(a);
+
+function kup(x){
+    return x*x*x;
+    // console.log("x*x*x*x*x"); return etiketinden sonra hiçbir komut çalıştırılmaz
+    // yani return fonksiyonu sonlandırır
+}
+function kare(x){
+    console.log(x*x);
+    return x*x;
+
+}
+
+function selamunaleyküm(){
+    return "selamunaleyküm";
+}
+console.log(selamunaleyküm());
+
+
+let b=  kare(kup(4));
+
+const hoyt= function(height){
+    console.log("HOYTTTT" +" " + height);
+}
+hoyt();
+hoyt(36);
+
+// Function yazarken çalıştırma 
+(function(soyad){
+    console.log("Baybars Enes" +" "+ soyad);})("BOZKURT");
+
+    const formul = {
+        host : "localhost",
+        add:function(){
+            console.log("Eklendi");
+        },
+        get:function(){
+            console.log("Alındı");
+        },
+        update:function(id){
+            console.log(`ÌD:${id} Güncellendi`);
+        },
+        deleted:function(id){
+            console.log(`ID: ${id}  Silindi`);
+        },
+    }
+    console.log(formul.host);
+    formul.deleted("adam");
+console.log(formul);
+
+
+    </script>
+    
+</body>
+</html>
