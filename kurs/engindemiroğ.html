@@ -22,7 +22,7 @@
     </p>
     <p id="p1">
 form ekleme ve yazıya tıklayınca forma odaklanma <br>
-<form action="">      
+<form class="todoform" action="">      
 <label for="name">Name</label><br>
 <input type="text" name="name" id="name" placeholder="Adınız"><br>
 <label for="email">Email</label><br>
@@ -74,7 +74,25 @@ Eğitim Durumu <br>
 
 
 
+<script>
+    
+    const name=document.getElementById("name");
+todoform=document.querySelector("#mesaj");
+    // name.onfocus=function(){
+    //     console.log("naber?");
+    // }
+// name.addEventListener("focus",function(e){
+//     console.log(e.type)
+// });
 
+todoform.addEventListener("Submit",newfunction);
+
+function newfunction(e){
+    console.log("submit");
+e.preventDefault();
+}
+
+</script>
 
 </body>
 </html>
