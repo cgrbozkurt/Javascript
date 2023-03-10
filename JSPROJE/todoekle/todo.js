@@ -18,8 +18,25 @@ function addTodo(e){
     const newTodo=todoInput.value.trim();
     console.log(newTodo);
 
-
+addTodoToUI(newTodo);
 
 
 e.preventDefault();
+}
+
+function addTodoToUI(newTodo){
+    const ListItem=document.createElement("li");
+    const link=document.createElement("a");
+    link.href="#";
+    link.className="delete-item";
+    link.innerHTML="<i class = 'fa fa-remove'></i>";
+    ListItem.className="list-group-item d-flex justify-content-between";
+
+    ListItem.appendChild(document.createTextNode(newTodo));
+
+    ListItem.appendChild(link);
+    todoList.appendChild(ListItem);
+
+
+
 }
