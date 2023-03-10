@@ -27,6 +27,7 @@ function addTodo(e){
 
     else {
         addTodoToUI(newTodo);
+        addTodoToStorage(newTodo);
 
     }
     if (newTodo==="todo"){
@@ -39,6 +40,22 @@ function addTodo(e){
 
 e.preventDefault();
 }
+
+function addTodoToStorage(newTodo){
+    let todos;
+
+    if (localStorage.getItem("todos") === null ){
+        todos=[];
+    }
+
+
+else{
+    todos=JSON.parse(localStorage.getItem("todos"));
+    return todos;
+
+}
+}
+
 
 function showAlert(type,message){
 
