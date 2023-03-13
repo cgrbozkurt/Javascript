@@ -6,6 +6,7 @@ const secondCardBody=document.querySelectorAll(".card-body")[1];
 const filter=document.querySelector("#filter");
 const clearButton=document.querySelector("#clear-todos");
 
+const todokey=[ ];
 
 eventListener();
 
@@ -18,8 +19,15 @@ function addTodo(e){
     const newTodo=todoInput.value.trim();
     console.log(newTodo);
 
-addTodoToUI(newTodo);
+if (newTodo===""){
+    alert("bir todo giriniz");
+}
 
+else {
+    addTodoToUI(newTodo);
+    addTodoToStorage(newTodo);
+
+}
 
 e.preventDefault();
 }
@@ -39,4 +47,22 @@ function addTodoToUI(newTodo){
 
 
 
+}
+
+
+
+function addTodoToStorage(newTodo){
+checkTodokeyFromStorage();
+todokey.push(newTodo);
+localStorage.setItem("todokey",JSON.stringify(todokey));
+
+}
+function checkTodokeyFromStorage (){
+    if(localStorage.getItem("todokey")===null){
+        todos=[];
+    
+    } 
+    else{
+        todos=JSON.parse(localStorage.getItem("todokey"));
+    }
 }
