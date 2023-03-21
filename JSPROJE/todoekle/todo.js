@@ -66,3 +66,4 @@ function checkTodokeyFromStorage (){
         todos=JSON.parse(localStorage.getItem("todokey"));
     }
 }
+
