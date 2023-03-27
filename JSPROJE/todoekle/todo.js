@@ -88,7 +88,7 @@ localStorage.setItem("todos",JSON.stringify(todokey));
 }
 function checkTodokeyFromStorage (){
     if(localStorage.getItem("todos")===null){
-        todos=["1"];
+        todos=[""];
     
     } 
     else{
