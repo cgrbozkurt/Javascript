@@ -1,7 +1,7 @@
 const form=document.getElementById("todo-form");
 const filter=document.getElementById("filter");
-const List=document.querySelector(".list-group");
 const todoInput=document.querySelector("#todo")
+const List=document.querySelector(".list-group");
 
 
 eventler();
@@ -14,7 +14,13 @@ function todoEkle(e){
     const yeniTodo=todoInput.value.trim();
 
     // console.log(yeniTodo);
-    yenitodoekle(yeniTodo);
+    if(yeniTodo===""){
+        alert("bir todo giriniz la")
+    }
+    else{
+        yenitodoekle(yeniTodo);
+
+    }
 
     e.preventDefault();
 }

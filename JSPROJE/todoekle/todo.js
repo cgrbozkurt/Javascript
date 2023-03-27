@@ -12,6 +12,35 @@ eventListener();
 
 function eventListener(){
     form.addEventListener("submit",addTodo);
+    document.addEventListener("DOMContentLoaded",LoadAllTodoToUI);
+    secondCardBody.addEventListener("click",deleteTodo);
+
+}
+
+function deleteTodo(e){
+    if(e.target.className==="fa fa-remove"){
+        e.target.parentElement.parentElement.remove();
+        alert("todo silindi babbaağ");
+        deleteTodoFromStorage(e.target.parentElement.parentElement);
+    }
+    localStorage.setItem("todos",JSON.stringify(todos));
+}
+
+function deleteTodoFromStorage(deleteTodo){
+let todos=addTodoToStorage();
+
+todos.forEach(function(todo,index){
+    if(todo===deleteTodo){
+        todos.splice(index,1);
+    }
+})
+}
+
+function LoadAllTodoToUI(){
+    let todos=addTodoToStorage();
+    todos.forEach(function(todoa){
+        addTodoToUI(todoa);  
+    })
 
 }
 
@@ -25,7 +54,7 @@ if (newTodo===""){
 
 else {
     addTodoToUI(newTodo);
-    addTodoToStorage(newTodo);
+    addTodoToStorage(newTodo);   
 
 }
 
@@ -54,16 +83,17 @@ function addTodoToUI(newTodo){
 function addTodoToStorage(newTodo){
 checkTodokeyFromStorage();
 todokey.push(newTodo);
-localStorage.setItem("todokey",JSON.stringify(todokey));
+localStorage.setItem("todos",JSON.stringify(todokey));
 
 }
 function checkTodokeyFromStorage (){
-    if(localStorage.getItem("todokey")===null){
-        todos=[];
+    if(localStorage.getItem("todos")===null){
+        todos=["1"];
     
     } 
     else{
-        todos=JSON.parse(localStorage.getItem("todokey"));
+        todos=JSON.parse(localStorage.getItem("todos"));
     }
+    return todos;
 }
 
