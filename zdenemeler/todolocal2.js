@@ -27,8 +27,11 @@ function addTodo(e){
     }
     else{ addTodoToUI(newTodo);
         addTodoToLocalStorage(newTodo);
+
     
     }
+
+    console.log(e.target);
 
     
     
