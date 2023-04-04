@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="number"></div>
+    <div>
+      <button class="plus">ARti</button>
+      <button class="minus">Eksi</button>
+      <button class="atamaYap">random ata</button>
+    </div>
+
+    <script>
+      const number = document.querySelector(".number");
+      const plus = document.querySelector(".plus");
+      const minus = document.querySelector(".minus");
+      const atamaYap = document.querySelector(".atamaYap");
+      let atananSayi = null;
+
+      function atamaYapapnFunc() {
+        console.log("object");
+        number.innerHTML = Math.floor(Math.random() * 100) + 1;
+      }
+
+      atamaYap.addEventListener("click", atamaYapapnFunc);
+
+      plus.addEventListener("click", function () {
+       atananSayi = +number.innerHTML;
+       atananSayi++;
+       number.innerHTML = atananSayi
+
+      });
+      minus.addEventListener("click", function () {
+       atananSayi = +number.innerHTML;
+       atananSayi--;
+       number.innerHTML = atananSayi
+      });
+
+      atamaYapapnFunc();
+    </script>
+  </body>
+</html>
