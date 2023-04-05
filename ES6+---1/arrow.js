@@ -22,3 +22,13 @@ const {a:numbera,b:numberb,e:numberc}=cars;
 
 // console.log(a,b,e);
 console.log(numbera,numberb,numberc);
+
+const getFruit = () => ["banana","apple","grape"];
+
+const [mey,meyv,meyve]=getFruit();
+console.log(mey,meyv,meyve);
+
+//SPREAD OPERATOR 
+
+console.log(...arr);
+
