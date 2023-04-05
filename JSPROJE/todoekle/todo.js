@@ -20,6 +20,11 @@ function eventListener(){
 function clearTodos(){
     if (confirm("hepsini Silelim mi hacabi")){
         todoList.innerHTML=null;
+        // while(todoList.firstElementChild != null){
+        //     todoList.removeChild(todolist.firstElementChild);
+        // }
+
+        // localStorage.removeItem("todos");
     }
 }
 
