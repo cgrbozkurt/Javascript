@@ -5,7 +5,6 @@ const firstCardBody=document.querySelectorAll(".card-body")[0];
 const secondCardBody=document.querySelectorAll(".card-body")[1];
 const filter=document.querySelector("#filter");
 const clearButton=document.querySelector("#clear-todos");
-
 const todokey=[ ];
 
 eventListener();
@@ -14,7 +13,27 @@ function eventListener(){
     form.addEventListener("submit",addTodo);
     document.addEventListener("DOMContentLoaded",LoadAllTodoToUI);
     secondCardBody.addEventListener("click",deleteTodo);
+    filter.addEventListener("keyup",filterTodos);
+    clearButton.addEventListener("click",clearTodos);
 
+}
+function clearTodos(){
+    if (confirm("hepsini Silelim mi hacabi")){
+        todoList.innerHTML=null;
+    }
+}
+
+function filterTodos(e){
+const filterValue=e.target.value.toLowerCase();
+const ListItems=document.querySelectorAll(".list-group-item");
+
+ListItems.forEach(function(ListItem){
+    const text=ListItem.textContent.toLowerCase();
+    if(text.indexOf(filterValue)===-1){
+        ListItem.setAttribute("style","display:none !important");
+    }
+    else ListItem.setAttribute("style","display:block");
+})
 }
 
 function deleteTodo(e){
@@ -27,7 +46,8 @@ function deleteTodo(e){
 }
 
 function deleteTodoFromStorage(deleteTodo){
-let todos=addTodoToStorage();
+    let todos;
+ todos=addTodoToStorage();
 
 todos.forEach(function(todo,index){
     if(todo===deleteTodo){
@@ -38,8 +58,8 @@ todos.forEach(function(todo,index){
 
 function LoadAllTodoToUI(){
     let todos=addTodoToStorage();
-    todos.forEach(function(todoa){
-        addTodoToUI(todoa);  
+    todos.forEach(function(todos){
+        addTodoToUI(todos);  
     })
 
 }
