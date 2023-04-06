@@ -9,21 +9,45 @@
     <title>Document</title>
 </head>
 <body>
+<section id="button">
 
     <button onclick="showRed()" id="button1"> sen </button>
     <button onclick="showBlue()" id="button2">yap</button>
     <button onclick="showGreen()" id="button3">dersin</button>
     <button onclick="showYellow()" id="button4">yapmaz</button>
     <button onclick="showBlack()" id="button5">mıyım</button>
+</section>
+  
+<section id="div1">
+    <div id="red-box" class="card-body bg-danger"             >red     </div>
+    <div id="blue-box" class="card-body bg-primary"           >blue  </div>
+    <div id="green-box" class="card-body bg-success"          >green  </div>
+    <div id="yellow-box" class="card-body bg-warning"         >yellow  </div>
+    <div id="black-box" class="card-body bg-dark text-danger" >black  </div>
+
+</section>
+
+
+   
+    <script src="tabindex.js">
+const but=document.querySelectorAll("#button").children;
+const divler=document.querySelectorAll("#div1").children;
+
+    but.children.addEventListeneer("click",myfunc);
+    const myfunc=()=>divler.style.display="block";
+    const nonee=()=>divler.style.display="none";
+
+    for(let i=0; i<but.length; i++){
+        for(let j=0; j<divler.length; j++){
+            if(j=1){myfunc();}
+            else{nonee();}
+
+        }
+    }
 
 
 
-    <div id="red-box" class="card-body bg-danger" style="display: none;">red</div>
-    <div id="blue-box" class="card-body bg-primary" style="display: none;" >blue</div>
-    <div id="green-box" class="card-body bg-success" style="display: none;">green</div>
-    <div id="yellow-box" class="card-body bg-warning" style="display: none;">yellow</div>
-    <div id="black-box" class="card-body bg-dark text-danger" style="display: none;">black</div>
 
-    <script src="tabindex.js"></script>
+    </script>
 </body>
 </html>
