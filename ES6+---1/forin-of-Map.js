@@ -30,10 +30,25 @@ for(let index in name){
 // }
 //ÇALIŞMADI
 
-for(let value of langs){
-console.log(value);
-}
+// for(let value of langs){
+// console.log(value);
+// }
 
-for (let value of name){
-    console.log(value);
-}
+// for (let value of name){
+//     console.log(value);
+// }
+
+// / MAP 
+
+const myMap=new Map();
+
+const key1="Baybars";
+const key2={a:10,b:20};
+const key3=myFunc=()=> 2;
+
+myMap.set(key1,"String Değeri");
+myMap.set(key2,"Object Değeri");
+myMap.set(key3,"Function Değeri");
+
+console.log(myMap.size);
+console.log(myMap);
