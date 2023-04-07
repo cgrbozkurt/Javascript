@@ -11,42 +11,40 @@
 <body>
 <section id="button">
 
-    <button onclick="showRed()" id="button1"> sen </button>
-    <button onclick="showBlue()" id="button2">yap</button>
-    <button onclick="showGreen()" id="button3">dersin</button>
-    <button onclick="showYellow()" id="button4">yapmaz</button>
-    <button onclick="showBlack()" id="button5">mıyım</button>
+    <button id="butto1nx"> sen </button>
+    <button  id="butto2nx">yap</button>
+    <button  id="butto3nx">dersin</button>
+    <button  id="butto4nx">yapmaz</button>
+    <button  id="butto5nx">mıyım</button>
 </section>
   
 <section id="div1">
-    <div id="red-box" class="card-body bg-danger"             >red     </div>
-    <div id="blue-box" class="card-body bg-primary"           >blue  </div>
-    <div id="green-box" class="card-body bg-success"          >green  </div>
-    <div id="yellow-box" class="card-body bg-warning"         >yellow  </div>
-    <div id="black-box" class="card-body bg-dark text-danger" >black  </div>
+    <div id="box1" class="card-body bg-danger"             >red     </div>
+    <div id="box2" class="card-body bg-primary"           >blue  </div>
+    <div id="box3" class="card-body bg-success"          >green  </div>
+    <div id="box4" class="card-body bg-warning"         >yellow  </div>
+    <div id="box5" class="card-body bg-dark text-danger" >black  </div>
 
 </section>
 
 
    
-    <script src="tabindex.js">
-const but=document.querySelectorAll("#button").children;
-const divler=document.querySelectorAll("#div1").children;
+    <script >
 
-    but.children.addEventListeneer("click",myfunc);
-    const myfunc=()=>divler.style.display="block";
-    const nonee=()=>divler.style.display="none";
+const section = document.getElementById("button");
+const div=document.getElementById("div1");
 
-    for(let i=0; i<but.length; i++){
-        for(let j=0; j<divler.length; j++){
-            if(j=1){myfunc();}
-            else{nonee();}
+const cba=document.querySelectorAll(".card-body");
 
-        }
+myfunc();
+
+function myfunc(){ div.style.display="block"}
+
+for( i=0; i<div.length; i++){
+    for(j=0;j<section.length;j++){
+          
     }
-
-
-
+}
 
     </script>
 </body>
