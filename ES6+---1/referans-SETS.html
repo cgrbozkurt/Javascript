@@ -36,6 +36,44 @@ console.log(cities.get("ankara"));
 console.log(cities.get(key));
 
 
+////////////SETS
+
+const myset=new Set();
+myset.add(100    );
+myset.add(100    );
+myset.add(3.14    );
+myset.add("Baybars"   );
+myset.add(true);
+myset.add([1,2,3]);
+myset.add({a:10,b:12});
+
+const myset2= new Set([100,3.14,"Baybars"]);
+
+console.log(myset);
+console.log(myset2);
+
+myset.delete(3.14);
+
+// .has ile değerin set içerisinde olup olmadığı sorgulanır 
+console.log(myset.has("Baybars")
+);
+
+//[1,2,3] farklı objeler olduğu için false verir
+console.log(myset.has([1,2,3]));
+
+
+console.log(myset.size);
+
+
+myset.forEach(function(value){    console.log(value);
+})
+
+
+// setten array oluşturma 
+
+const aa=Array.from(myset);
+
+console.log(aa);
 
 
 
