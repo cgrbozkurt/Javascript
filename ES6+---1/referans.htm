@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referans tipler</title>
+</head>
+<body>
+    <script>
+
+let array1="baybars";
+let array2="baybars";
+//primitive tipde array1=array2 doğrudur
+myFunction();
+function myFunction(){
+    if (array1===array2) {console.log("eşittir");}
+else {console.log("eşit değil");}
+}
+
+// referans tip olduğunda arrayler farklı bölgeler olduğu için birbirine eşit değildir 
+let sayilar=[1,2,3,4,6];
+let sayilar2=[1,2,3,4,6];
+
+if(sayilar===sayilar2){
+    console.log("eşittir ");
+}
+
+// key değerini array şeklinde verirsen okumaz fakat arrayi let-var-constla objeye çevirirsek okur
+let cities= new Map();
+let key=[1,2,3];
+
+cities.set("ankara",5);
+cities.set(key,"kayseri");
+console.log(cities.get("ankara"));
+console.log(cities.get(key));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
