@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype1</title>
+</head>
+<body>
+<p id="demo">1</p>
+<script>
+    // const object=new Object();
+    // const object2=new Object();
+
+    // object.name="Baybars";
+    // object.surname="Bozkurt";
+    // object.salary=3000+" " +"USD";
+
+function proto(name,age,salary){
+    this.name=name;
+    this.age=age;
+    this.salary=salary;
+    this.ShowInfos=function(){
+        console.log("Bilgiler Gösteriliyor");
+    }
+    this.fonksiyon=function(){
+        console.log("bu bir employe objesidir");
+    }
+
+}  
+
+const emp1=new proto("Baybars",1,13000+"Usd");
+console.log(emp1);
+console.log(emp1.fonksiyon());
+
+
+
+
+
+</script>    
+</body>
+</html>

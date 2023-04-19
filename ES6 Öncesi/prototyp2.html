@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype2</title>
+</head>
+<body>
+    <script>
+
+// function Employee(name,age){
+//     this.name=name;
+//     this.age=age;}
+
+//     Employee.prototype.showInfos=function(){
+//         console.log("isim:"+this.name+" " +"Yaş:"+this.age);
+//     }
+   
+// const newemp=new Employee("Baybars",6+"Aylık");
+
+// console.log(newemp);
+
+// newemp.showInfos();
+
+
+function CV(name,experince,salary){
+    this.isim=name;
+    this.Tecrube=experince;
+    this.Maas=salary;
+
+}
+
+CV.prototype.bilgiler=function(){
+    console.log("İsim:"+this.isim+"Tecrübe"+this.Tecrube+"Maaş"+this.Maas);
+
+}
+
+const baycv=new CV("Baybars Enes",1+"Yıl",4750+"USD");
+
+baycv.bilgiler();
+console.log(baycv);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

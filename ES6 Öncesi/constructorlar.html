@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+console.log(window);
+
+const cv={
+    name:"Baybars",
+    age:1,
+    gender:"male",
+    bilgiler:function(){console.log("bilgiler gösteriliyor")  }
+
+}
+
+cv.salary=3000;
+console.log(cv);
+cv.bilgiler();
+
+function Isci(name,age,salary){
+this.name=name;
+this.age=age;
+this.salary=salary;
+console.log(this)   ;
+this.Goster=function(){
+    console.log(this.name,this.age,this.salary,this.name);
+}
+
+}
+
+const I1=new Isci("Baybars",01,3000);
+const I2=new Isci("Çağrı",30,123123);
+ I1.Goster();
+
+
+ 
+    </script>
+</body>
+</html>
