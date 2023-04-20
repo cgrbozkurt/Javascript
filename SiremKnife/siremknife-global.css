@@ -1,0 +1,16 @@
+.bbp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: auto;
+    padding-right: 15px;
+    text-align: center;
+    
+}
+.bb{
+    background-color: black;
+    color: white;
+}

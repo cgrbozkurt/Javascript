@@ -1,0 +1,38 @@
+.baslik{
+    font-size:2rem;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    background-color: black;
+    padding-top: 7px;
+    margin-right: 10px;
+}
+
+.form{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    padding: 14px;
+}
+
+.search-icon{
+    width: 30px;
+    height: 30px;
+}
+/* .sepet{
+    width: 30px;
+    height: 40px;
+    padding-bottom:auto;
+    background-color: black;
+} */
+.bbp:hover{
+    background-color: white;
+    color:black;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.sepetos{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+}
