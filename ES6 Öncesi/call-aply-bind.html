@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+const obj1={
+number1:20,
+number2:30
+}
+
+const obj2={
+number1:120,
+number2:130
+}
+
+function topla(number3,number4){
+    console.log(this.number1+this.number2+number3+number4);
+}
+
+topla(3+5);
+topla.call(obj1,3,5);
+topla.call(obj2,3,5);
+
+topla.apply(obj1,[100,200]);
+
+function sayilaritopla(number3,number4){
+ return   this.number1 + this.number2 + number3 + number4;
+}
+
+const kopyafonksiyon1=sayilaritopla.bind(obj1);
+const kopyafonksiyon2=sayilaritopla.bind(obj2);
+
+console.log(kopyafonksiyon1(1000,2000));
+console.log(kopyafonksiyon2(1000,2000));    
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

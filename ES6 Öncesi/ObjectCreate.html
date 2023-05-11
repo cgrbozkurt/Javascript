@@ -8,18 +8,72 @@
 </head>
 <body>
     <script>
-const obj={
-    test1:function(){
-console.log("Test 1 Çalışıyor");
-    },
-    test2:function(){
-        console.log("Test 2 Çalışıyor");
-    }
+// const obj={
+//     test1:function(){
+// console.log("Test 1 Çalışıyor");
+//     },
+//     test2:function(){
+//         console.log("Test 2 Çalışıyor");
+//     }
+// }
+// // console.log(obj);
+
+// const oba=Object.create(obj);
+// oba.name = "Çağrı";
+// oba.age=23;
+
+// console.log(oba);
+
+
+function person(){
+
 }
 
-const oba=Object.create(obj);
+person.prototype.test1= function(){
+    console.log("test 1");
+}
+person.prototype.test2= function(){
+    console.log("test 2");
+}
 
-console.log(oba);
+function employee(name,age){
+    this.name=name;
+    this.age=age;
+}
+
+employee.prototype=Object.create(person.prototype);
+
+const emp=new employee("Çağrı",29);
+emp.test2();
+console.log(emp);
+
+
+
+function insan(){
+
+}
+
+insan.prototype.sayi1=function(){
+    console.log("Sayi"+" "+ "1");
+}
+insan.prototype.sayi2=function(){
+    console.log("Sayi 2");
+}
+
+function isim(ad,soyad){
+    this.ad=ad;
+    this.soyad=soyad
+}
+
+isim.prototype=Object.create(insan.prototype);
+
+const deneme=new isim("Çağrı","Bozkurt");
+console.log(deneme);
+deneme.sayi1();
+
+
+
+
 
     </script>
     
