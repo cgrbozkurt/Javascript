@@ -29,3 +29,20 @@ UI.prototype.addFilmToUI=function(newFilm){
 }
 
 
+UI.prototype.displayMessages=function(message,type){
+
+  const cardBody=document.querySelector(".card-body");
+
+  const alertDiv=document.createElement("div");
+
+  alertDiv.className=`alert alert-${type}`;
+
+  alertDiv.textContent=message;
+
+  cardBody.appendChild(alertDiv);
+
+
+  setTimeout(function(){
+alertDiv.remove();
+  },2000);
+}

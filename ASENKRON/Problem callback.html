@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const users=[
+    {
+        userId:"Çağrı" ,
+        userPost: "Çağrı1"
+    },
+    {
+        userId:"Çağrı" ,
+        userPost:"Çağrı2 "
+    },
+    {
+        userId: "Çağrı",
+        userPost:"Çağrı3"
+    },
+    {
+        userId: "Çağrı",
+        userPost:"Çağrı4"
+    },
+    {
+        userId:"ali" ,
+        userPost:"veli"
+    },
+    {
+        userId:49 ,
+        userPost:50
+    },
+    {
+        userId:49 ,
+        userPost:51
+    }
+]
+
+const getUserID=(callback)=> {
+    setTimeout(() => {
+        let id="Çağrı";
+
+        callback(id);
+    }, 1000);
+}
+
+const getUserPost=(id)=>{
+    setTimeout(() => {
+users.forEach((users)=>{
+    if(users.userId!==id){
+        console.log("userid bulunamadı");
+    }
+    else{console.log(users.userPost);}
+})
+        
+    }, 500);
+}
+
+
+getUserID(getUserPost)
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
