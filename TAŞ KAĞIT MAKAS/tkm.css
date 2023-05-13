@@ -58,9 +58,14 @@ flex-direction: row;
 justify-content: space-between;}
 
 .orta{
-    width: 33%;
+    width: 23%;
+    height: 23%;
+    background-color: aqua;
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
     margin: auto;
+    border-radius: 23%;
+    padding: auto;
 }
