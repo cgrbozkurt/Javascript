@@ -1,12 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background-color: moccasin; */
 
-}
-.body{background-color: brown;}
+
 #navbar{
+    width: 80%;
  display: flex;
  flex-direction: row;
  justify-content: space-around;
@@ -15,6 +10,8 @@
  background-color: black;
  padding-left: 10%;
  padding-right:10% ;
+
+ 
 }
 
 .leftDiv{
@@ -23,6 +20,9 @@
     width: 50%;
     background-color: black;
 
+}
+.leftDiv:hover{
+    cursor: pointer;
 }
 .logo{
     width: 70px;
@@ -65,7 +65,8 @@ background-color: gainsboro;}
     list-style: none;
     width: 100%;
     height: 50px;
-
+position: relative;
+margin-top: auto;
 }
 .kategori{
     padding-top: 10px;
@@ -73,4 +74,5 @@ background-color: gainsboro;}
 .kategori:hover{
     background-color: gainsboro;
     color:white;
+    cursor: pointer;
 }

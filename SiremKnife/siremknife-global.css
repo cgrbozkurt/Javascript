@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gainsboro;
+
+}
 .bbp{
     display: flex;
     flex-direction: row;
@@ -21,4 +28,60 @@
     background-color: black;
     padding-top: 3px;
     padding-left: 15 px;
+}
+#cok-satan{
+    width: 100%;
+    background-color:black;
+    color: white;
+    height: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding: 10px; */
+    overflow-x: scroll;
+    overflow-y: hidden
+    /* border: 12px solid black; */
+}
+
+.res{width:200px;}
+
+.resim{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.urun{
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+}
+
+.urunler{
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+    background-color:white;
+    width: 80%;
+    margin: auto;
+}
+
+.aciklama, .fiyat{
+    background-color: black;
+}
+
+.urun:hover{
+    cursor: pointer;
+}
+
+.toolbar{
+    width: 80%;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding:10px ;
 }
