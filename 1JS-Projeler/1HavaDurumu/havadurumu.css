@@ -1,0 +1,10 @@
+.body{padding: 0; margin: 0; box-sizing: border-box;}
+
+.weather{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+background-image: url(kurt.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 100%;
+}
