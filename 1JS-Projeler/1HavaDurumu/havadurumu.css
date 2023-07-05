@@ -53,13 +53,14 @@
 }
 
 
-.city  {
-    font-size: 75px;
+#city  {
+    font-size: 99px;
     padding-bottom: 15px;
 }
 
-.temp ,.desc, .min {
-    padding-bottom:  10px;
+.temp, .desc, .min {
+    padding-bottom:  30px;
+    font-size: 25px;
 }
 
 
