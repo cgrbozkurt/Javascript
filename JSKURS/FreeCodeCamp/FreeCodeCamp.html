@@ -7,69 +7,79 @@
   </head>
   <body>
     <script>
-      function myfunc(val) {
-        if (val < 55 && val > 25) {
-          console.log("oldu");
-        } else if (val == 88) {
-          console.log("yine oldu");
-        } else {
-          console.log("olmadı");
-        }
-      }
+      // function myfunc(val) {
+      //   if (val < 55 && val > 25) {
+      //     console.log("oldu");
+      //   } else if (val == 88) {
+      //     console.log("yine oldu");
+      //   } else {
+      //     console.log("olmadı");
+      //   }
+      // }
 
-      myfunc(88);
+      // myfunc(88);
 
-      const func = (a, b) => {
-        console.log(a < b);
-      };
-      func(3, 5);
+      // const func = (a, b) => {
+      //   console.log(a < b);
+      // };
+      // func(3, 5);
 
-      function abTest(a, b) {
-        // Only change code below this line
+      // function abTest(a, b) {
+      //   // Only change code below this line
 
-        if (a < 0 || b < 0) {
-          return undefined;
-        }
-        // Only change code above this line
+      //   if (a < 0 || b < 0) {
+      //     return undefined;
+      //   }
+      //   // Only change code above this line
 
-        return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
-      }
+      //   return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+      // }
 
-      abTest(2, 2);
+      // abTest(2, 2);
 
-      let count = 0;
+      // let count = 0;
 
-      function cc(card) {
-        // Only change code below this line
-        switch (card) {
-          case 2:
-          case 3:
-          case 4:
-          case 5:
-          case 6:
-            count++;
-            break;
-          case 10:
-          case "J":
-          case "Q":
-          case "K":
-          case "A":
-            count--;
-            break;
-        }
-        if (count > 0) {
-          return console.log(count + " Bet");
-        } else {
-          return count + " Hold";
-        }
-        // Only change code above this line
-      }
+      // function cc(card) {
+      //   // Only change code below this line
+      //   switch (card) {
+      //     case 2:
+      //     case 3:
+      //     case 4:
+      //     case 5:
+      //     case 6:
+      //       count++;
+      //       break;
+      //     case 10:
+      //     case "J":
+      //     case "Q":
+      //     case "K":
+      //     case "A":
+      //       count--;
+      //       break;
+      //   }
+      //   if (count > 0) {
+      //     return console.log(count + " Bet");
+      //   } else {
+      //     return count + " Hold";
+      //   }
+      //   // Only change code above this line
+      // }
 
-      cc(5);
-      cc(3);
-      cc(7);
-      cc("Q");
-      cc("A");
+      // cc(5);
+      // cc(3);
+      // cc(7);
+      // cc("Q");
+      // cc("A");
+
+      const arr = [
+  [1, 2], [3, 4], [5, 6]
+];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
     </script>
   </body>
 </html>
