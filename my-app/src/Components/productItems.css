@@ -1,8 +1,13 @@
 .product-item{
     border: 1px solid #e3e4e5;
+    height: 250px;
+    background-color:rgba(0,0,0,.3);
 }
 .product-item img{
     width: 100%;
+    opacity: .9;
+    height: 120px;
+    
 }
 
 .product-info{

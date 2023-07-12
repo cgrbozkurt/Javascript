@@ -1,21 +1,36 @@
 import ProductItem from "./ProductItems";
 import "./products.css";
 function Product() {
-    const date=new Date();
+  const date = new Date();
+ 
+  const data = [
+    {
+      fullName: "pirzola",
+      price: "25₺",
+      yurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFdfgF8rsuaq7UZIWVv1pYtcx5PFzL1Fn-Q&usqp=CAU",
+    },
+    {
+      fullName: "Dana Bonfile",
+      price: "39$",
+      yurl: "https://i.ytimg.com/vi/6aOkU9GLs6k/sddefault.jpg#404_is_fine",
+    },
+  ];
 
   return (
-   <div className="total"> 
-    <h1>Products</h1>
-     <div className="products">
-      <ProductItem></ProductItem>
-      <ProductItem></ProductItem>
-      <ProductItem></ProductItem>
-      <ProductItem></ProductItem>
-    </div>
-    <span>{date.toISOString()}</span>
+    <div className="total">
+      <h1>Products</h1>
+      <div className="products">
+     {data.map((product)=>(   <ProductItem
+     key={product.fullName}
+     product={product}
+        
+        />))}
 
-   </div>
+     
+      </div>
+      <span>{date.toISOString()}</span>
+    </div>
   );
 }
 
-export default Product ;
+export default Product;
