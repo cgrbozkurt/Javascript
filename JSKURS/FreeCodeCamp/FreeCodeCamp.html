@@ -71,15 +71,55 @@
       // cc("Q");
       // cc("A");
 
-      const arr = [
-  [1, 2], [3, 4], [5, 6]
-];
+//       const arr = [
+//   [1, 2], [3, 4], [5, 6]
+// ];
 
-for (let i = 0; i < arr.length; i++) {
-  for (let j = 0; j < arr[i].length; j++) {
-    console.log(arr[i][j]);
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     console.log(arr[i][j]);
+//   }
+// }
+
+// function multiplyAll(arr) {
+//   var product = 1;
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       product = product * arr[i][j];
+//     }
+//   }
+//   return product;
+// }
+
+// multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+// const array{}
+
+
+function multi(arr,n){
+  if(n<=0){
+    return 0;
+  }
+  else{
+    return multi(arr,n-1)+arr[n-1];
   }
 }
+multi([1,2,3,4,5,6,7],4);
+
+function sum(arr, n) {
+  // Only change code below this line
+if(n<=0){return 0;}
+else{
+  return sum(arr,n-1)+arr[n-1];
+}
+  // Only change code above this line
+}
+
+console.log(sum([2,13,4,5],3));
+
+
+
+
     </script>
   </body>
 </html>
