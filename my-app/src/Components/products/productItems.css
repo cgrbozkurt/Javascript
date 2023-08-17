@@ -6,7 +6,7 @@
 .product-item img{
     width: 100%;
     opacity: .9;
-    height: 120px;
+    height: 110px;
     
 }
 
@@ -14,9 +14,14 @@
     padding: 10px;
 }
 .product-tittle{
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
 }
 .product-price{
     font-size: 14px;
+}
+
+.reklam{
+    font-size: 12px;
 }

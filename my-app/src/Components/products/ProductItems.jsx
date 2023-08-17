@@ -2,18 +2,26 @@ import "./productItems.css";
 import Reklam from "./reklam";
 
 function ProductItem(props) {
-   const {data,fullName,price,yurl,product}=props;
-  console.log(product);  
-  return (
+   const {product}=props;
+
+  const clickHandler=()=>{
+    console.log("Sepete Eklendi");
+  }
+ 
+  
+   return (
     <div className="product-item">
       <div className="product-image">
         <img src={product.yurl} alt="" />
+    
+       
       </div>
-      <div className="product-info">
-        <h2 className="product-tittle">{product.fullName}</h2>
+      <Reklam>
+      <h2 className="product-tittle">{product.fullName}</h2>
         <span className="product-price">{product.price}</span>
-      </div>
-      <Reklam>afdfadfasdf</Reklam>
+        <br />
+      </Reklam>
+      <button onClick={clickHandler}>Güncelle</button>
       
 
     </div>
