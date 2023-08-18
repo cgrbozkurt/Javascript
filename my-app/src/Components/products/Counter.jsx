@@ -6,9 +6,9 @@ const [counter,setCounter]=useState(props.price);
 
   return (
     <div>
-      <button onClick={()=>setCounter(props.price+1)}>+</button>
-      <span>{props.price}</span>
-      <button onClick={()=>setCounter(props.price-2)}>-</button>
+      <button onClick={()=>setCounter(counter - 1)}>-</button>
+      {props.children}
+      <button onClick={()=>setCounter(counter * 2)}>+</button>
     </div>
   )
 }

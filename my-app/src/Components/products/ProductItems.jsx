@@ -4,7 +4,7 @@ import Reklam from "./reklam";
 import { useState } from "react";
 
 function ProductItem(props) {
-  const { product, price, yurl } = props;
+  const { product } = props;
 const [title,setTitle]=useState(product.fullName);
 
   const clickHandler = () => {
@@ -19,8 +19,9 @@ console.log(product.fullName,"Güncellendi"); };
       </div>
       <Reklam>
         <h2 className="product-tittle">{title}</h2>
-        <span className="product-price">{product.price}₺</span>
         <Counter price={product.price}  />
+        <span className="product-price">{product.price}</span>
+
         <br />
       </Reklam>
       
