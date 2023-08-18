@@ -3,7 +3,7 @@ import "./products.css";
 function Product() {
   const date = new Date();
  
-  const data = [
+  const product = [
     {
       fullName: "pirzola",
       price: "25",
@@ -23,7 +23,7 @@ yurl:"https://media.istockphoto.com/id/175590628/tr/foto%C4%9Fraf/tzatziki-sauce
     <div className="total">
       <h1>Products</h1>
       <div className="products">
-     {data.map((product)=>(   <ProductItem
+     {product.map((product)=>(   <ProductItem
      key={product.fullName}
      product={product}
         

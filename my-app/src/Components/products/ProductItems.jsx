@@ -6,6 +6,8 @@ import { useState } from "react";
 function ProductItem(props) {
   const { product } = props;
 const [title,setTitle]=useState(product.fullName);
+const [counter, setCounter] = useState(product.price);
+
 
   const clickHandler = () => {
 setTitle("Güncellendi") 
@@ -19,9 +21,9 @@ console.log(product.fullName,"Güncellendi"); };
       </div>
       <Reklam>
         <h2 className="product-tittle">{title}</h2>
-        <Counter price={product.price}  />
-        <span className="product-price">{product.price}</span>
-
+        <Counter price={product.price} counter={counter} setCounter={setCounter}  >
+             <span>{counter}₺</span>
+             </Counter>
         <br />
       </Reklam>
       
