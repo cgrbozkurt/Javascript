@@ -1,3 +1,4 @@
+import NewProduct from "../NewProduct/NewProduct";
 import ProductItem from "./ProductItems";
 import "./products.css";
 function Product() {
@@ -21,6 +22,7 @@ yurl:"https://media.istockphoto.com/id/175590628/tr/foto%C4%9Fraf/tzatziki-sauce
 
   return (
     <div className="total">
+      <NewProduct/>
       <h1>Products</h1>
       <div className="products">
      {product.map((product)=>(   <ProductItem
