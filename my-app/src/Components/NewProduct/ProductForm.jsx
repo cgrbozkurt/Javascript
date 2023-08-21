@@ -21,28 +21,33 @@ const ProductForm = () => {
     //   ...productData,
     //   productName:e.target.value
     // });
-    setProductData((prevState) => {
-      return { ...prevState, productName: e.target.value };
-    });
+    // setProductData((prevState) => {
+    //   return { ...prevState, productName: e.target.value };
+    // });
+    setProductName(e.target.value);
   };
   const priceChangeHandler = (e) => {
-    setProductData({
-      ...productData,
-      productPrices: e.target.value,
-    });
+    // setProductData({
+    //   ...productData,
+    //   productPrices: e.target.value,
+    // });
+    setProductPrice(e.target.value);
   };
   const urlChangeHandler = (e) => {
-    setProductData({
-      ...productData,
-      productUrl: e.target.value,
-    });
+    // setProductData({
+    //   ...productData,
+    //   productUrl: e.target.value,
+    // });
+    setProductUrl(e.target.value);
   };
 
   const submitHandler = (e) => {
     
     const newProductData = { productName, productPrices, productUrl };
 
-console.log(newProductData);
+console.log(setProductName(""),
+setProductPrice(""),
+setProductPrice(""));
 e.preventDefault();
   };
 
@@ -56,6 +61,7 @@ e.preventDefault();
           id=""
           placeholder="Ürün Giriniz"
           onChange={titleChangeHandler}
+          value={productName}
         />
       </div>
       <div className="product-form-input">
@@ -66,6 +72,7 @@ e.preventDefault();
           id=""
           placeholder="Adet giriniz"
           onChange={priceChangeHandler}
+          value={productPrices}
         />
       </div>
       <div className="product-form-input">
@@ -76,6 +83,7 @@ e.preventDefault();
           id=""
           placeholder="Resim Yükleyin"
           onChange={urlChangeHandler}
+          value={productUrl}
         />
         {productData.productUrl}
       </div>
