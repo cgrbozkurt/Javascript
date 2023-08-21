@@ -1,54 +1,42 @@
 import { useState } from "react";
 import "./ProductForm.css";
 
-const ProductForm = () => {
+const ProductForm = (props) => {
   const [ productName,setProductName]=useState("");
   const [ productPrices,setProductPrice]=useState("");
-  const [ productUrl,setProductUrl]=useState("");
+  const [ imageUrl,setImageUrl]=useState("");
 
- const newProductData={
-  productName,
-  productPrices,
-  productUrl
- }
 
-  // const productChangeHandler=()=>{
-  //   setProductData()
-  // }
-
+  
   const titleChangeHandler = (e) => {
-    // setProductData({
-    //   ...productData,
-    //   productName:e.target.value
-    // });
-    // setProductData((prevState) => {
-    //   return { ...prevState, productName: e.target.value };
-    // });
+
     setProductName(e.target.value);
   };
+
   const priceChangeHandler = (e) => {
-    // setProductData({
-    //   ...productData,
-    //   productPrices: e.target.value,
-    // });
+
     setProductPrice(e.target.value);
   };
-  const urlChangeHandler = (e) => {
-    // setProductData({
-    //   ...productData,
-    //   productUrl: e.target.value,
-    // });
-    setProductUrl(e.target.value);
+
+
+  const imageChangeHandler = (e) => {
+
+    setImageUrl(e.target.value);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    
+const newProductData={
+  productName,
+  productPrices,
+  imageUrl
+}    
+props.setProducts((prevState)=>[...prevState, newProductData] )
 console.log(newProductData);
-setProductName("");
-setProductPrice("");
-setProductUrl("");
-  };
+setProductName("")
+setProductPrice("")
+setImageUrl("") 
+  }
 
   return (
     <form className="product-form" onSubmit={submitHandler}>
@@ -81,10 +69,10 @@ setProductUrl("");
           name=""
           id=""
           placeholder="Resim Yükleyin"
-          onChange={urlChangeHandler}
-          value={productUrl}
+          onChange={imageChangeHandler}
+          value={imageUrl}
         />
-        {productUrl}
+        {imageUrl}
       </div>
       <button className="product-form-buttons">Ara</button>
     </form>

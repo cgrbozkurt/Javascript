@@ -1,10 +1,12 @@
 import NewProduct from "../NewProduct/NewProduct";
 import ProductItem from "./ProductItems";
 import "./products.css";
-function Product() {
-  const date = new Date();
+import { useState } from "react";
 
-  const product = [
+function Product() {
+
+
+  const productData = [
     {
       fullName: "pirzola",
       price: "25",
@@ -21,17 +23,18 @@ function Product() {
       yurl: "https://media.istockphoto.com/id/175590628/tr/foto%C4%9Fraf/tzatziki-sauce.webp?b=1&s=170667a&w=0&k=20&c=lDPfFSgMIosB6vYs7bXZzVcDVg5Mh6NxE0jTZWxUUGQ=",
     },
   ];
+  const [products, setProducts] = useState(productData);
 
   return (
     <div className="total">
-      <NewProduct />
+      <NewProduct setProducts={setProducts} />
       <h1>Products</h1>
       <div className="products">
-        {product.map((product) => (
-          <ProductItem key={product.fullName} product={product} />
+        {products.map((product) => (
+          <ProductItem key={product.fullName} product={product} productData={productData} />
         ))}
       </div>
-      <span>{date.toISOString()}</span>
+     
     </div>
   );
 }
