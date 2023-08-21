@@ -6,11 +6,11 @@ const ProductForm = () => {
   const [ productPrices,setProductPrice]=useState("");
   const [ productUrl,setProductUrl]=useState("");
 
-  const [productData, setProductData] = useState({
-    productName: "",
-    productPrice: "",
-    productPrices: "",
-  });
+ const newProductData={
+  productName,
+  productPrices,
+  productUrl
+ }
 
   // const productChangeHandler=()=>{
   //   setProductData()
@@ -42,19 +42,18 @@ const ProductForm = () => {
   };
 
   const submitHandler = (e) => {
+    e.preventDefault();
     
-    const newProductData = { productName, productPrices, productUrl };
-
-console.log(setProductName(""),
-setProductPrice(""),
-setProductPrice(""));
-e.preventDefault();
+console.log(newProductData);
+setProductName("");
+setProductPrice("");
+setProductUrl("");
   };
 
   return (
     <form className="product-form" onSubmit={submitHandler}>
       <div className="product-form-input">
-        <label htmlFor="">{productData.productName}</label>
+        <label htmlFor="">{productName}</label>
         <input
           type="text"
           name=""
@@ -65,7 +64,7 @@ e.preventDefault();
         />
       </div>
       <div className="product-form-input">
-        <label htmlFor="">{productData.productPrices}</label>
+        <label htmlFor="">{productPrices}</label>
         <input
           type="number"
           name=""
@@ -85,7 +84,7 @@ e.preventDefault();
           onChange={urlChangeHandler}
           value={productUrl}
         />
-        {productData.productUrl}
+        {productUrl}
       </div>
       <button className="product-form-buttons">Ara</button>
     </form>
