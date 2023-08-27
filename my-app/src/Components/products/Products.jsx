@@ -14,12 +14,13 @@ console.log(productData);
       <NewProduct setProducts={setProducts} products={products} />
       <h1>Products</h1>
       <div className="products">
-        {/* {products.map((product) => (
-          <ProductItem key={product.productName} product={product} />
-        ))} */
-       
-        }
-        { products.map((product)=>(<ProductItem product={product} key={product.id} />))}
+    {products.length === 0 ? <p>Hiç Ürün Yok<p/> : products.map((product)
+    =>(
+      <ProductItem product={product} key={product.id}/>
+      ))
+      }
+
+        
       </div>
     </div>
   );
