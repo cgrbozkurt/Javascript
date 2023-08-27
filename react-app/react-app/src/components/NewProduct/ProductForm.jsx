@@ -5,47 +5,33 @@ const ProductForm = () => {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  /*   const [productData, setProductData] = useState({
-    productName: "",
-    productPrice: "",
-    imageUrl: "",
-  }); */
 
   const titleChangeHandler = (event) => {
     setProductName(event.target.value);
-    /* setProductData({
-      ...productData,
-      productName: event.target.value,
-    }); */
-    /* setProductData((prevState) => {
-      return { ...prevState, productName: event.target.value };
-    }); */
   };
 
   const priceChangeHandler = (event) => {
     setProductPrice(event.target.value);
-    /*  setProductData({
-      ...productData,
-      productPrice: event.target.value,
-    }); 
-    setProductData((prevState) => {
-      return { ...prevState, productPrice: event.target.value };
-    }); */
   };
 
   const imageChangeHandler = (event) => {
     setImageUrl(event.target.value);
-    /*  setProductData({
-      ...productData,
-      imageUrl: event.target.value,
-    }); 
-    setProductData((prevState) => {
-      return { ...prevState, imageUrl: event.target.value };
-    }); */
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    
+    const newProductData = {
+      productName,
+      productPrice,
+      imageUrl,
+    };
+
+    console.log(newProductData);
   };
 
   return (
-    <form className="product-form">
+    <form className="product-form" onSubmit={submitHandler}>
       <div className="product-form-input">
         <label>Ürün Adı</label>
         <input

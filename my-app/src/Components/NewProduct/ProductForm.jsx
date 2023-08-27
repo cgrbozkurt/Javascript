@@ -2,79 +2,73 @@ import { useState } from "react";
 import "./ProductForm.css";
 
 const ProductForm = (props) => {
-  const [ productName,setProductName]=useState("");
-  const [ productPrices,setProductPrice]=useState("");
-  const [ imageUrl,setImageUrl]=useState("");
+  const [productName, setProductName] = useState("");
+  const [productPrice, setProductPrice] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
 
-
-  
-  const titleChangeHandler = (e) => {
-
-    setProductName(e.target.value);
+  const titleChangeHandler = (event) => {
+    setProductName(event.target.value);
   };
 
-  const priceChangeHandler = (e) => {
-
-    setProductPrice(e.target.value);
+  const priceChangeHandler = (event) => {
+    setProductPrice(event.target.value);
   };
 
-
-  const imageChangeHandler = (e) => {
-
-    setImageUrl(e.target.value);
+  const imageChangeHandler = (event) => {
+    setImageUrl(event.target.value);
   };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-const newProductData={
-  productName,
-  productPrices,
-  imageUrl
-}    
-props.setProducts((prevState)=>[...prevState, newProductData] )
-console.log(newProductData);
-setProductName("")
-setProductPrice("")
-setImageUrl("") 
-  }
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const newProductData = {
+      id:props.products.length +1,
+      productName,
+      productPrice,
+      imageUrl,
+      
+    };
+
+    // props.setProducts((prevState)=>[...prevState,newProductData]);
+    props.setProducts([...props.products,newProductData])
+
+
+    console.log(newProductData);
+    setProductName("")
+    setProductPrice("")
+    setImageUrl("")
+  };
 
   return (
     <form className="product-form" onSubmit={submitHandler}>
       <div className="product-form-input">
-        <label htmlFor="">{productName}</label>
+        <label>Ürün Adı</label>
         <input
           type="text"
-          name=""
-          id=""
-          placeholder="Ürün Giriniz"
+          placeholder="Ürün Adı Giriniz..."
           onChange={titleChangeHandler}
           value={productName}
         />
       </div>
       <div className="product-form-input">
-        <label htmlFor="">{productPrices}</label>
+        <label>Ürün Fiyatı</label>
         <input
           type="number"
-          name=""
-          id=""
-          placeholder="Adet giriniz"
+          placeholder="Ürün Fiyatı Giriniz..."
           onChange={priceChangeHandler}
-          value={productPrices}
+          value={productPrice}
         />
       </div>
       <div className="product-form-input">
-        <label htmlFor=""></label>
+        <label>Ürün Görseli</label>
         <input
           type="text"
-          name=""
-          id=""
-          placeholder="Resim Yükleyin"
+          placeholder="Ürün Görseli Giriniz..."
           onChange={imageChangeHandler}
           value={imageUrl}
         />
-        {imageUrl}
       </div>
-      <button className="product-form-buttons">Ara</button>
+      <button className="product-form-button">Ürün Ekle</button>
     </form>
   );
 };

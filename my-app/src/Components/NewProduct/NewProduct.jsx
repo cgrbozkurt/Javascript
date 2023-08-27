@@ -1,13 +1,11 @@
 import ProductForm from "./ProductForm";
 
-import React from 'react'
-
 const NewProduct = (props) => {
   return (
     <div className="new-product-wrapper">
-        <ProductForm setProducts={props.setProducts} />
+      <ProductForm setProducts={props.setProducts} products={props.products}  />
     </div>
-  )
-}
+  );
+};
 
-export default NewProduct
+export default NewProduct;

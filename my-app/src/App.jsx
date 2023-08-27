@@ -1,23 +1,18 @@
-import { useState } from 'react';
-import './App.css';
-import Counter from './Components/products/Counter';
-import Product from './Components/products/Products';
+import { useState } from "react";
+import "./App.css";
+import Counter from "./components/Counter";
+import Products from "./components/Products/Products.jsx";
 
-
-function App() {
-  const [counter, setCounter] = useState(100);
-
+const App = () => {
+  const [counter, setCounter] = useState(0);
   return (
     <div className="App">
-      
-    <Product></Product>
-    <Counter counter={counter} setCounter={setCounter} 
-     >
-{counter}
-    </Counter>
+      <Products />
+      <Counter counter={counter} setCounter={setCounter} productPrice={counter}>
+        {counter}
+      </Counter>
     </div>
-   
   );
-}
+};
 
 export default App;

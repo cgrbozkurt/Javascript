@@ -1,42 +1,28 @@
+import ProductItem from "./ProductItem";
+import { productData } from "../../productData";
+import "./Products.css";
 import NewProduct from "../NewProduct/NewProduct";
-import ProductItem from "./ProductItems";
-import "./products.css";
 import { useState } from "react";
 
-function Product() {
-
-
-  const productData = [
-    {
-      fullName: "pirzola",
-      price: "25",
-      yurl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoFdfgF8rsuaq7UZIWVv1pYtcx5PFzL1Fn-Q&usqp=CAU",
-    },
-    {
-      fullName: "Dana Bonfile",
-      price: "39",
-      yurl: "https://i.ytimg.com/vi/6aOkU9GLs6k/sddefault.jpg#404_is_fine",
-    },
-    {
-      fullName: "Cacık",
-      price: "10",
-      yurl: "https://media.istockphoto.com/id/175590628/tr/foto%C4%9Fraf/tzatziki-sauce.webp?b=1&s=170667a&w=0&k=20&c=lDPfFSgMIosB6vYs7bXZzVcDVg5Mh6NxE0jTZWxUUGQ=",
-    },
-  ];
-  const [products, setProducts] = useState(productData);
+const Products = () => {
+  // const [products,setProducts]=useState(productData);
+  const [products,setProducts]=useState(productData)
+console.log(productData);
 
   return (
-    <div className="total">
-      <NewProduct setProducts={setProducts} />
+    <div className="product-wrapper">
+      <NewProduct setProducts={setProducts} products={products} />
       <h1>Products</h1>
       <div className="products">
-        {products.map((product) => (
-          <ProductItem key={product.fullName} product={product} productData={productData} />
-        ))}
+        {/* {products.map((product) => (
+          <ProductItem key={product.productName} product={product} />
+        ))} */
+       
+        }
+        { products.map((product)=>(<ProductItem product={product} key={product.id} />))}
       </div>
-     
     </div>
   );
-}
+};
 
-export default Product;
+export default Products;
