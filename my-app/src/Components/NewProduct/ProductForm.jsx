@@ -30,10 +30,10 @@ const ProductForm = (props) => {
     };
 
     // props.setProducts((prevState)=>[...prevState,newProductData]);
-    props.setProducts([...props.products,newProductData])
+   props.onSaveProduct(newProductData);
 
 
-    console.log(newProductData);
+   
     setProductName("")
     setProductPrice("")
     setImageUrl("")
