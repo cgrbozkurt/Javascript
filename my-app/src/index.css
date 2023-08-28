@@ -23,3 +23,9 @@ button {
   background-color: rgb(238, 102, 5);
   color: white;
 }
+
+
+.btn-delete{
+  background-color: rgba(213, 32, 29, 0.992);
+  margin-left: 10px;
+}
