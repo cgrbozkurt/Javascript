@@ -14,9 +14,8 @@ const ProductItem = ({ product, products, setProducts }) => {
     console.log(productName, "Güncellendi!");
   };
 
-  const deleteHandler = () => {
-    setProducts(products.filter((item) => item.id !== product.id));
-  };
+  
+  const deleteHandler=()=>setProducts(products.filter((item)=>item.id !==product.id))
 
   return (
     <div className="product-item">
