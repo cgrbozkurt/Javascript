@@ -10,7 +10,6 @@ function App() {
     // setCustomers([...customers, newCustomer]);
     setCustomers((prevState) => [newCustomer, ...prevState]);
   };
-
   return (
     <div className="App">
       <h1>Customer Manage System</h1>

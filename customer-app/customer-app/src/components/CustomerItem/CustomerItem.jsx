@@ -7,7 +7,10 @@ const CustomerItem = ({ customer, handleDelete }) => {
           alt=""
           className="customer-avatar"
         />
-        <span className="customer-name">{customer.customerName}</span>
+        <span className="customer-name" style={{
+          color:"red",
+          background:"blue"
+        }}>{customer.customerName}</span>
       </div>
       <button className="delete-button" onClick={() => handleDelete(customer)}>
         <i className="bi bi-trash3"></i>
