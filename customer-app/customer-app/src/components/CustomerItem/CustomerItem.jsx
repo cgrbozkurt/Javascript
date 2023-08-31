@@ -1,3 +1,4 @@
+import "./CustomerItem.css"
 const CustomerItem = ({ customer, handleDelete }) => {
   return (
     <li className="customer-item">
