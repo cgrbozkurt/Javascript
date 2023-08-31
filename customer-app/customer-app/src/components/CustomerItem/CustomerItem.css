@@ -22,8 +22,11 @@
       font-size: 18px;
   }
   
-  .delete-button {
+  /* .delete-button {
     background-color: red;
     padding: 8px;
-  }
+  } */
   
+  /* .delete-button:hover{
+    opacity: .5;
+  } */

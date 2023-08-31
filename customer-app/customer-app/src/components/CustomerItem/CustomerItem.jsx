@@ -1,4 +1,14 @@
+import styled from "styled-components"
 import "./CustomerItem.css"
+
+const DeleteButton = styled.button`
+background-color: red;
+padding: 8px;
+transition: opacity .5s ease;
+
+&:hover{opacity:0.5;}
+` 
+
 const CustomerItem = ({ customer, handleDelete }) => {
   return (
     <li className="customer-item">
@@ -13,9 +23,9 @@ const CustomerItem = ({ customer, handleDelete }) => {
           background:"blue"
         }}>{customer.customerName}</span>
       </div>
-      <button className="delete-button" onClick={() => handleDelete(customer)}>
+      <DeleteButton className="delete-button" onClick={() => handleDelete(customer)}>
         <i className="bi bi-trash3"></i>
-      </button>
+      </DeleteButton>
     </li>
   );
 };
