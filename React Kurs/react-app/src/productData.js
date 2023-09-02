@@ -18,3 +18,4 @@ export const productData = [
     productPrice: 100,
   },
 ];
+ 
