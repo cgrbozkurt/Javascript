@@ -3,6 +3,12 @@ import Card from "../UI/Card";
 const WorkerList = (props) => {
 const {workers,setWorkers}=props; 
 
+if(workers.length<1){
+  return;
+
+}
+
+
 const deleteWorker=(id)=>{
   setWorkers(workers.filter((item)=>item.id !== id));
 }
@@ -18,7 +24,7 @@ const deleteWorker=(id)=>{
           <li
             className="flex justify-between cursor-pointer hover:shadow-xl p-2 transition-shadow "
             key={worker.id}
-            onclick={()=>deleteWorker(worker.id)}
+            onClick={()=>deleteWorker(worker.id)}
             
           >
             <span>{worker.name}</span>
