@@ -6,20 +6,26 @@ import ErrorModal from "./ErrorModal";
 const AddWorker = (props) => {
   const [enteredWorkerName, setenteredWorkerName] = useState("");
   const [enteredWage, setenteredWage] = useState("");
+  const [error , setError]=useState()
 
   const minimumWage = 5000;
 
   const addWorkerHandler = (e) => {
     e.preventDefault();
     if (
-      enteredWorkerName.trim().length === 0 ||
-      enteredWage.trim().length === 0
+      enteredWorkerName.trim().length === 0 
     ) {
-      console.log("değer giriniz")
+     setError({
+title: "İsim Alanı Zorunludur",
+message:"Lütfen bir isim giriniz "
+     })
       return;
     }
     if(enteredWage < minimumWage ){
-      console.log("Geçerli maaş girin");
+      setError({
+        title:"Maaş Alanı Zorunludur",
+        message:`Lütfen ${minimumWage} değerinden büyük bir sayı giriniz`
+      })
       return;
      }
     
@@ -37,12 +43,15 @@ const AddWorker = (props) => {
     ])
     console.log(enteredWorkerName, enteredWage);
 
-  }
+  };
 
+const errorHandler=()=>{
+setError(null)
+}
  
   return (
     <div>
-<ErrorModal></ErrorModal>
+{error && <ErrorModal onConfirm={errorHandler} error={error} ></ErrorModal>}
 
 <Card className="mt-10">
       <form className="flex flex-col gap-y-2" onSubmit={addWorkerHandler}>
