@@ -1,6 +1,6 @@
 const Button = (props) => {
   return (
-    <button className={`p-2 bg-teal-700 text-lg text-white ${props.className}`
+    <button className={`p-2 bg-teal-700 text-lg text-white  ${props.className}`
     }
     type={props.type || "button"}
     >

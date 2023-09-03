@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 
-const AddWorker = () => {
+const AddWorker = (props) => {
   const [enteredWorkerName, setenteredWorkerName] = useState("");
   const [enteredWage, setenteredWage] = useState("");
 
@@ -23,15 +23,24 @@ const AddWorker = () => {
      }
     
 
+
     setenteredWage("");
     setenteredWorkerName("");
+    props.setWorkers((prevState)=>[
+      {
+        id: Math.floor(Math.random()*1000),
+        name:enteredWorkerName,
+        wage:enteredWage
+      },
+      ...prevState,
+    ])
     console.log(enteredWorkerName, enteredWage);
 
   }
 
  
   return (
-    <Card addClass="mt-10">
+    <Card className="mt-10">
       <form className="flex flex-col gap-y-2" onSubmit={addWorkerHandler}>
         <label htmlFor="name" className="font-medium ">
           Çalışan İsmi
