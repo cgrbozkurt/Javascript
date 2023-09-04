@@ -2,8 +2,8 @@ import Button from "../UI/Button";
 import Card from "../UI/Card";
 
 const ErrorModal = (props) => {
-const [onConfirm, error]=props;
-const [title,message]=error
+const {onConfirm, error}=props;
+const {title,message}=error
 
   return (
     <div className="ErrorModal ">
