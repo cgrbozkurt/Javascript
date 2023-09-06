@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
 import Card from "./Card";
 import ReactDOM from "react-dom";
@@ -33,6 +33,13 @@ const ModalOverlay = (props) => {
 const ErrorModal = (props) => {
   const { onConfirm, error } = props;
   const { title, message } = error;
+
+  useEffect(()=>{
+    console.log("Modal Oluşturuldu");
+return ()=>{console.log("Component Kaldırıldı");}
+  },[]
+  )
+
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
