@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "./Button";
 import Card from "./Card";
 import ReactDOM from "react-dom";
@@ -33,12 +33,23 @@ const ModalOverlay = (props) => {
 const ErrorModal = (props) => {
   const { onConfirm, error } = props;
   const { title, message } = error;
+  const cleanupRef=useRef();
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log("Modal Oluşturuldu");
-return ()=>{console.log("Component Kaldırıldı");}
-  },[]
-  )
+    return () => {
+      if(cleanupRef.current){
+        console.log("Component Kaldırıldı");
+      props.setWorkers([]);
+      }
+    };
+  }, [cleanupRef,props]);
+
+useEffect(()=>{
+  return ()=>{
+    cleanupRef.current=true;
+  }
+})
 
   return (
     <React.Fragment>
@@ -46,7 +57,10 @@ return ()=>{console.log("Component Kaldırıldı");}
         <Backdrop onConfirm={onConfirm} />,
         document.getElementById("backdrop-root")
       )}
-      {ReactDOM.createPortal(<ModalOverlay title={title} message={message} onConfirm={onConfirm} />,document.getElementById("modal-overlay"))}
+      {ReactDOM.createPortal(
+        <ModalOverlay title={title} message={message} onConfirm={onConfirm} />,
+        document.getElementById("modal-overlay")
+      )}
     </React.Fragment>
   );
 };
