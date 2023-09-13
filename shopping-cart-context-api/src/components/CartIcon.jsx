@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import { CartContext } from "../context/CartContext";
 
-const CartIcon = ({ cart }) => {
 
+const CartIcon = () => {
+  const {cart}=useContext(CartContext);
   return (
     <div className="relative">
       <FiShoppingCart className="text-2xl" onClick={() => setMyState("Emir")} />

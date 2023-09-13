@@ -1,6 +1,10 @@
-const Cart = ({ cart, emptyCart }) => {
-  const total = cart.reduce((acc, item) => acc + item.price, 0)
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
+const Cart = () => {
+const {cart,emptyCart}=useContext(CartContext);
+
+  const total = cart.reduce((acc, item) => acc + item.price, 0)
   if (cart.length === 0) return;
   return (
     <div className="border ml-auto w-72 p-4 mt-2 rounded-lg shadow-lg">
