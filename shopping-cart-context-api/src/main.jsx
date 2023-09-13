@@ -3,12 +3,13 @@ import App from "./App";
 import "./index.css";
 import { MyProvider } from "./context/MyContext";
 import React from "react";
+import { CartProvider } from "./context/CartContext";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <MyProvider >
+    <CartProvider >
       <App />
-    </MyProvider>
+    </CartProvider>
   </React.StrictMode>
 );
